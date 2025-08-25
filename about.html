@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Webpage about My self">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <title>About?</title>
+    </head>
+
+    <body>
+        <!--dark mode check box-->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Dark Mode</em>
+        </div>
+    
+        <!--Basic info-->
+        <section class="basic-profile">
+            <img src="images/profile.jpg" alt="Profile pic" width="30%">
+            <h1>Samuel Teshome</h1>
+            <pre class="description">
+                          I'm a Front-end developer focusing on responsive design. I hold a B.SC. on Software Enginnering from HiLCoE collage of technology. 
+I've 2 years of experience on building project related to UIs. When not coding, I'll contribute to my open-source project and play football. I'm keen in 
+specialization of Creating user-friendly UIs for different devices. I hope I'll achieve what I want.
+            </pre>
+        </section>
+
+        <!--Education level using table-->
+        <section class="Edu-level">
+            <table border="2">
+                <caption>Education level</caption>
+                <tr>
+                    <th>Degree Type</th>
+                    <th>Collage Name</th>
+                    <th>Grad. Year(G.C)</th>
+                </tr>
+
+                <tr>
+                    <td>Diploma in IT</td>
+                    <td>Dobsco collage</td>
+                    <td>2019</td>
+                </tr>
+
+                <tr>
+                    <td>B.SC. Software Enginnering</td>
+                    <td>HilCoE</td>
+                    <td>2023</td>
+                </tr>
+            </table>
+        </section>
+
+        <!--Description of experience & skills using ordered & unordered lists-->
+        <section class="Work-Exp">
+            <h1>Work experience</h1>
+            <ol type="I" start="1">
+                <li><strong>Intern</strong> at startup (2022)</li>
+                <li><strong>UX Designer</strong> at YagoutPay (2023 - 2024)</li>
+            </ol>
+        </section>
+
+        <section class="Skills">
+            <h1>Skills</h1>
+            <ul class="skills">
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript</li>
+                <li>Tools & Frame Works
+                    <ul>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!--for transition & animation-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const sections = document.querySelectorAll('section');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+            });
+        </script>
+    </body>
+</html>

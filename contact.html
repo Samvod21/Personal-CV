@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="description" content="Contact Form">
+        <title>Contact Me</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--dark mode check box-->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Dark Mode</em>
+        </div>
+
+        <!--The contact form-->
+        <section class="contactform">
+            <h1 class="form-title">Contact Form</h1>
+            
+            <div class="form-box">
+                <form action="/submit" method="post" class="form1">
+                    <label form="Name">Name</label>
+                    <input type="text" placeholder="Name" id="Name" required>
+                    <Label form="Email">Email</Label>
+                    <input type="email" placeholder="Email" id="Email" required>
+                    <label form="PhoneNum">Phone</label>
+                    <input type="number" placeholder="PhoneNumber" required>
+                    <label form="comment" class="labelcomment">Comment:</label>
+                    <textarea name="comment" rows="4" placeholder="Any messages" class="textarea" required></textarea>
+                    <button type="submit" class="submit">Send</button>
+                </form>
+            </div>
+            
+        </section>
+
+        <!--Social Media links-->
+        <section class="medialinks">
+            <a href="https://t.me/Sami210231">
+                <img src="images/telegram.jpg" alt="telegram link" class="link">
+            </a>
+
+            <a href="https://www.instagram.com/samvod210?igsh=MXY2ejZ1N2tuZzRmdA==">
+                <img src="images/insta.jpg" alt="instagram link" class="link">
+            </a>
+
+            <a href="https://x.com/Samvod210?t=nG5J-7LsCQ5ghrYfmI9eJw&s=35">
+                <img src="images/x.jpg" alt="X link" class="link">
+            </a>
+        </section>
+
+        <!--Calender year & Copy right description-->
+        <footer class="footer">
+            <p>&copy; <span>2025</span> Samuel Teshome. All rights reserved.</p>
+        </footer>
+
+        <!--for transition & animation-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const sections = document.querySelectorAll('section');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+            });
+        </script>
+    </body>
+</html>

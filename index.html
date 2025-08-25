@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="description" content="CV web">
+        <title>Samuel | profile</title>
+        <link rel="stylesheet" href="css/style.css">
+        <!--Google Font-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--dark mode check box-->
+        <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <em>Dark Mode</em>
+        </div>
+    
+        <!--The upper head-->
+        <header>
+            <div class="content">
+                <img src="images/profile.jpg" alt="Samuel's profile picture" width="30%">
+                <h1><mark>Samuel Teshome</mark></h1>
+                <h2>Front-end developer</h2>
+                <p class="cont_text">Creating responsive and beautiful web experiences</p>
+            </div>
+        </header>
+
+        <!--The main body-->
+        <main>
+            <section class="core-skills">
+                <h2 class="title">Core Skills</h2>
+                <div class="skill-container">
+                    <div class="skill-card">
+                        <h3>Web development</h3>
+                        <ul class="skill-lists">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Tools & Frame Works</h3>
+                        <ul class="skill-card">
+                            <li>Git & Git-Hub</li>
+                            <li>React.js</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </section>
+
+            <section class="featured-skill">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="featured-container">
+                    <img src="images/project.jpg" alt="E-commerce project" width="50%">
+                    <div>
+                        <h3>Modern E-commerce Website</h3>
+                        <p>A fully responsive online store built with react.js and Node.js</p>
+                        <a href="portfolio.html">View Project details</a>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <p>I'm currently available for full-time work or freelance work</p>
+            </section>
+        </main>
+
+        <!--The Footer-->
+        <footer class="footer">
+            <section class="footer-content">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <nav class="links">
+                        <ul class="links-list">
+                            <li><a href="about.html">About?</a></li>
+                            <li><a href="portfolio.html">View My Work</a></li>
+                            <li><a href="contact.html">Contact Me</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!--Calender year & Copy right description-->
+                <div class="bottom">
+                    <p>&copy; <span>2025</span> Samuel Teshome. All rights reserved.</p>
+                </div>
+            </section>
+        </footer>
+
+        <!--for transition & animation-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const sections = document.querySelectorAll('section');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+            });
+        </script>
+    </body>
+</html>
